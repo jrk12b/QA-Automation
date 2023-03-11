@@ -19,13 +19,12 @@ const AppReducer = (state, action) => {
 };
 
 const initialState = {
-	budget: 2000,
+	budget: 24,
 	expenses: [
-		{ id: uuidv4(), name: 'Shopping', cost: 50 },
-		{ id: uuidv4(), name: 'Holiday', cost: 300 },
-		{ id: uuidv4(), name: 'Transportation', cost: 70 },
-		{ id: uuidv4(), name: 'Fuel', cost: 40 },
-		{ id: uuidv4(), name: 'Child Care', cost: 500 },
+		{ id: uuidv4(), name: 'Reading', cost: 1 },
+		{ id: uuidv4(), name: 'Work', cost: 8 },
+		{ id: uuidv4(), name: 'Running', cost: 2 },
+		{ id: uuidv4(), name: 'Sleep', cost: 9 },
 	],
 };
 
