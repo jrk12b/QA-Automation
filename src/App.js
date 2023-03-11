@@ -3,38 +3,11 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AppProvider } from './context/AppContext';
 import Budget from './components/Budget';
+import Graph from './components/Graph';
 import ExpenseTotal from './components/ExpenseTotal';
 import ExpenseList from './components/ExpenseList';
 import AddExpenseForm from './components/AddExpenseForm';
 import Remaining from './components/Remaining';
-import { PieChart, Pie } from 'recharts';
-
-function Graph() {
-	// Sample data
-	const data = [
-		{ name: 'Group A', value: 400 },
-		{ name: 'Group B', value: 300 },
-		{ name: 'Group C', value: 300 },
-		{ name: 'Group D', value: 200 },
-		{ name: 'Group E', value: 278 },
-		{ name: 'Group F', value: 189 },
-	];
-	return (
-		<PieChart width={400} height={400}>
-			<Pie
-				dataKey="value"
-				startAngle={180}
-				endAngle={0}
-				data={data}
-				cx="50%"
-				cy="50%"
-				outerRadius={80}
-				fill="#8884d8"
-				label
-			/>
-		</PieChart>
-	);
-}
 
 function App() {
 	return (
