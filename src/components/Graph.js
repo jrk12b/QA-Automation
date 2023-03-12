@@ -74,20 +74,26 @@ export default function Graph() {
 		[setActiveIndex]
 	);
 
-	// getting the data
+	// Getting the data
 	const { expenses, budget } = useContext(AppContext);
 
+	// Get Remaining hours
 	const totalExpenses = expenses.reduce((total, item) => {
 		return (total = total + item.cost);
 	}, 0);
 
-	
+	// Create data array to be populate
 	const data = [
-		{ name: 'Group A', value: budget },
-		{ name: 'Group B', value: budget - totalExpenses },
-		{ name: 'Group C', value: totalExpenses },
-		{ name: expenses.name, value: expenses.cost },
+		// { name: 'Group A', value: '10' }
 	];
+
+	// Populate data array with remaining hours
+	data.push({ name: 'Hours Remaining', value: budget - totalExpenses });
+
+	// Loop through expenses array and populate data array
+	expenses.forEach(element => {
+		data.push({ name: element.name, value: element.cost })
+	});
 
 	return (
 		<PieChart width={400} height={400}>
