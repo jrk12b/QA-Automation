@@ -3,15 +3,15 @@ import { v4 as uuidv4 } from 'uuid';
 
 const AppReducer = (state, action) => {
 	switch (action.type) {
-		case 'ADD_EXPENSE':
+		case 'ADD_ACTIVITY':
 			return {
 				...state,
-				expenses: [...state.expenses, action.payload],
+				activites: [...state.activites, action.payload],
 			};
-		case 'DELETE_EXPENSE':
+		case 'DELETE_ACTIVITY':
 			return {
 				...state,
-				expenses: state.expenses.filter((expense) => expense.id !== action.payload),
+				activites: state.activites.filter((activity) => activity.id !== action.payload),
 			};
 		default:
 			return state;
@@ -19,12 +19,12 @@ const AppReducer = (state, action) => {
 };
 
 const initialState = {
-	budget: 24,
-	expenses: [
-		{ id: uuidv4(), name: 'Reading', cost: 1 },
-		{ id: uuidv4(), name: 'Work', cost: 8 },
-		{ id: uuidv4(), name: 'Running', cost: 2 },
-		{ id: uuidv4(), name: 'Sleep', cost: 9 },
+	hours: 24,
+	activites: [
+		{ id: uuidv4(), name: 'Reading', hour: 1 },
+		{ id: uuidv4(), name: 'Work', hour: 8 },
+		{ id: uuidv4(), name: 'Running', hour: 2 },
+		{ id: uuidv4(), name: 'Sleep', hour: 9 },
 	],
 };
 
@@ -36,8 +36,8 @@ export const AppProvider = (props) => {
 	return (
 		<AppContext.Provider
 			value={{
-				budget: state.budget,
-				expenses: state.expenses,
+				hours: state.hours,
+				activities: state.activites,
 				dispatch,
 			}}
 		>

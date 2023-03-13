@@ -75,11 +75,11 @@ export default function Graph() {
 	);
 
 	// Getting the data
-	const { expenses, budget } = useContext(AppContext);
+	const { activities, budget } = useContext(AppContext);
 
 	// Get Remaining hours
-	const totalExpenses = expenses.reduce((total, item) => {
-		return (total = total + item.cost);
+	const totalActivities = activities.reduce((total, item) => {
+		return (total = total + item.hour);
 	}, 0);
 
 	// Create data array to be populate
@@ -88,11 +88,11 @@ export default function Graph() {
 	];
 
 	// Populate data array with remaining hours
-	data.push({ name: 'Hours Remaining', value: budget - totalExpenses });
+	data.push({ name: 'Hours Remaining', value: budget - totalActivities });
 
-	// Loop through expenses array and populate data array
-	expenses.forEach(element => {
-		data.push({ name: element.name, value: element.cost })
+	// Loop through activities array and populate data array
+	activities.forEach(element => {
+		data.push({ name: element.name, value: element.hour })
 	});
 
 	return (

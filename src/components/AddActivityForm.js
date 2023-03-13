@@ -2,24 +2,24 @@ import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 import { v4 as uuidv4 } from 'uuid';
 
-const AddExpenseForm = () => {
+const AddActivityForm = () => {
 	const { dispatch } = useContext(AppContext);
 
 	const [name, setName] = useState('');
-	const [cost, setCost] = useState('');
+	const [hour, setCost] = useState('');
 
 	const onSubmit = (event) => {
 		event.preventDefault();
 
-		const expense = {
+		const activity = {
 			id: uuidv4(),
 			name: name,
-			cost: parseInt(cost),
+			hour: parseInt(hour),
 		};
 
 		dispatch({
-			type: 'ADD_EXPENSE',
-			payload: expense,
+			type: 'ADD_ACTIVITY',
+			payload: activity,
 		});
 	};
 
@@ -44,7 +44,7 @@ const AddExpenseForm = () => {
 						type="text"
 						className="form-control"
 						id="cost"
-						value={cost}
+						value={hour}
 						onChange={(event) => setCost(event.target.value)}
 					></input>
 				</div>
@@ -58,4 +58,4 @@ const AddExpenseForm = () => {
 	);
 };
 
-export default AddExpenseForm;
+export default AddActivityForm;

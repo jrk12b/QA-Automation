@@ -1,40 +1,39 @@
-// https://www.freecodecamp.org/news/react-budget-tracker-app/
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { AppProvider } from './context/AppContext';
-import Budget from './components/Budget';
+import TimeBudget from './components/TimeBudget';
 import Graph from './components/Graph';
-import ExpenseTotal from './components/ExpenseTotal';
-import ExpenseList from './components/ExpenseList';
-import AddExpenseForm from './components/AddExpenseForm';
-import Remaining from './components/Remaining';
+import ActivityTotal from './components/ActivityTotal';
+import ActivityList from './components/ActivityList';
+import AddActivityForm from './components/AddActivityForm';
+import RemainingHours from './components/RemainingHours';
 
 function App() {
 	return (
 		<AppProvider>
 			<div className="container">
-				<h1 className="mt-3">My Budget Planner</h1>
+				<h1 className="mt-3">TimeOfDay</h1>
 				<div className="row mt-3">
 					<div className="col-sm">
-						<Budget />
+						<TimeBudget />
 					</div>
 					<div className="col-sm">
-						<Remaining />
+						<RemainingHours />
 					</div>
 					<div className="col-sm">
-						<ExpenseTotal />
+						<ActivityTotal />
 					</div>
 				</div>
-				<h3 className="mt-3">Expenses</h3>
+				<h3 className="mt-3">Activities</h3>
 				<div className="row mt-3">
 					<div className="col-sm">
-						<ExpenseList />
+						<ActivityList />
 					</div>
 				</div>
-				<h3 className="mt-3">Add Expense</h3>
+				<h3 className="mt-3">Add Activity</h3>
 				<div className="row mt-3">
 					<div className="col-sm">
-						<AddExpenseForm />
+						<AddActivityForm />
 					</div>
 				</div>
 				<Graph />
