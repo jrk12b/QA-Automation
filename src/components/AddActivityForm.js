@@ -6,7 +6,7 @@ const AddActivityForm = () => {
 	const { dispatch } = useContext(AppContext);
 
 	const [name, setName] = useState('');
-	const [hour, setCost] = useState('');
+	const [hour, setHour] = useState('');
 
 	const onSubmit = (event) => {
 		event.preventDefault();
@@ -27,7 +27,7 @@ const AddActivityForm = () => {
 		<form onSubmit={onSubmit}>
 			<div className="row">
 				<div className="col-sm">
-					<label for="name">Name</label>
+					<label htmlFor="name">Name</label>
 					<input
 						required="required"
 						type="text"
@@ -38,14 +38,14 @@ const AddActivityForm = () => {
 					></input>
 				</div>
 				<div className="col-sm">
-					<label for="cost">Cost</label>
+					<label htmlFor="hour">Hours</label>
 					<input
 						required="required"
 						type="text"
 						className="form-control"
-						id="cost"
+						id="hour"
 						value={hour}
-						onChange={(event) => setCost(event.target.value)}
+						onChange={(event) => setHour(event.target.value)}
 					></input>
 				</div>
 				<div className="col-sm">
