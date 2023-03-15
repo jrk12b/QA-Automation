@@ -8,7 +8,7 @@ const RemainingHours = () => {
 		return (total = total + item.hour);
 	}, 0);
 
-	const alertType = totalActivities > hours ? 'alert-danger' : 'alert-success';
+	const alertType = totalActivities > hours ? 'alert-danger' : 'alert alert-secondary';
 
 	return (
 		<div className={`alert ${alertType}`}>

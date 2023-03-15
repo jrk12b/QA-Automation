@@ -8,7 +8,12 @@ const ActivityList = () => {
 	return (
 		<ul className="list-group">
 			{activities.map((activity) => (
-				<ActivityItem key={activity.id} id={activity.id} name={activity.name} hour={activity.hour} />
+				<ActivityItem
+					key={activity.id}
+					id={activity.id}
+					name={activity.name}
+					hour={activity.hour}
+				/>
 			))}
 		</ul>
 	);
