@@ -1,9 +1,8 @@
 {
 	"name": "client",
 	"version": "0.1.0",
+	"description": "",
 	"proxy": "http://localhost:3000",
-	"private": true,
-	"dependencies": {},
 	"scripts": {
 		"jest": "npx jest",
 		"postman": "newman run postman/collection.json",
@@ -17,6 +16,16 @@
 		"format-check": "npx prettier --check .",
 		"format-write": "npx prettier --write ."
 	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/jrk12b/QA-Automation.git"
+	},
+	"author": "Justin Kurdila",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/jrk12b/QA-Automation/issues"
+	},
+	"homepage": "https://github.com/jrk12b/QA-Automationn#readme",
 	"devDependencies": {
 		"@cypress-audit/lighthouse": "^1.4.2",
 		"cypress": "^12.17.4",
@@ -26,5 +35,8 @@
 		"newman": "^5.3.2",
 		"postman": "^0.2.0",
 		"prettier": "3.0.3"
+	},
+	"dependencies": {
+
 	}
 }
