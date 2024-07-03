@@ -1,14 +1,31 @@
-# Getting Started with Create React App
+# QA Automation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository holds the source code for the QA Automation used to test the website https://www.justinkurdila.com/
 
-## Available Scripts
+## Testing Framework
 
-- `npm start`
-- Runs the app in the development mode.\
-- Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Installation
 
-## Prettier
+1. Clone repo locally
 
-- `npx prettier --check .`
-- `npx prettier --write .`
+`git clone https://github.com/jrk12b/website_qa_automation.git`
+
+2. Install Dependencies
+
+`npm i`
+
+Install K6 locally
+https://k6.io/docs/get-started/installation/
+
+## Usage
+
+All tests run in Github Actions as defined in `node.js.yml`
+
+* To run jest - `npm run jest`
+* To run postman - `npm run postman`
+* To run k6 - `npm run k6`
+* To open cypress - `npm run cy:open`
+* To run cypress in chrome - `npm run cy:run-chrome`
+* To run cypress in firefox - `npm run cy:run-firefox`
+* To run cypress in edge - `npm run cy:run-edge`
+* To run cypress in electron - `npm run cy:run-electron`
