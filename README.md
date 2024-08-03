@@ -1,6 +1,6 @@
 # QA Automation
 
-This repository holds the source code for the QA Automation used to test the website https://www.justinkurdila.com/
+This repo is deprecated. New repo here: https://github.com/jrk12b/Javascript-Automation
 
 ## Testing Framework
 
